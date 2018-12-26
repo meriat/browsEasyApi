@@ -1,9 +1,14 @@
-import express from 'express';
 import db from './db/db';
 import bodyParser from 'body-parser';
 
+var express = require('express');
+// var cors = require('cors');
+
 // Set up the express app
 const app = express();
+// app.use(cors());
+
+
 
 //Parse incoming requests data
 app.use(bodyParser.json());
@@ -86,3 +91,18 @@ app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`)
 });
 
+    // let getDataPromise = new Promise((resolve, reject) => {
+    //   let httpRequest = new XMLHttpRequest();
+    //   httpRequest.open("GET", "http://localhost:5000/api/v1/masterProductList", true);
+    //   httpRequest.onload = () => {
+    //     let master_data = JSON.parse(httpRequest.responseText);
+    //     resolve(master_data.masterProductList);
+    //   };
+    //   httpRequest.onerror = () => {
+    //     reject(httpRequest.statusText);
+    //   }
+    //   httpRequest.send();
+    // });
+    // getDataPromise.then(data => {
+    //   this.setState({products: data});
+    // });
