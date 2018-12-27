@@ -2,11 +2,11 @@ import db from './db/db';
 import bodyParser from 'body-parser';
 
 var express = require('express');
-// var cors = require('cors');
+var cors = require('cors');
 
 // Set up the express app
 const app = express();
-// app.use(cors());
+app.use(cors());
 
 
 
